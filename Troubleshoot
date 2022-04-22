@@ -1,4 +1,33 @@
-Disclosure: The next steps will be for companies or if your on an open/secure network
+"Failed to connect to ESP32: Timed out waiting for packet header" (The Biggest Issue For Me)
+
+A: If you are using jumper wires, I HIGHLY reccommend you switch to an ESP32-CAM-MB USB Programmer. 
+This ensures that you have a enough power to enable the wifi capabilities. Also, the instructions are for the USB programmer. 
+
+A: If you are using a programmer, when you start to see these dots on the debugging window when uploading a new scheme, press and 
+hold the ESP32-CAM on-board RST button until you see "connecting". This should put your board in "flash mode" which allows the code
+to upload.
+
+
+
+
+"No IP Address is showing in the Serial Monitor or dots are just showing"
+
+A: Make sure you have the right wifi information inputed. If you have no password just leave the "password" field as "". 
+   Also, it's case sensitive make sure the name and password EXACTLY match your wifi information.
+
+
+
+
+
+Disclosure: The next steps will be for companies or if you're on an open/secure network
+
+The ESP32 CAM does NOT have a visible MAC address to bypass open wifi security protocols. This will result in a "blank" page when you enter the unique IP adress in 
+your webserver. 
+
+To solve this issue:
+
+Go to the main page and select the "MAC" code. Run this code in Arduino, click Tools, Serial Monitor, and the MAC address should be visible.
+Go to your wifi settings and add the MAC address to the "allowed devices" section
 
 
 
